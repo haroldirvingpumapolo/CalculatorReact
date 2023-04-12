@@ -9,62 +9,76 @@ function CalculatorButtons({ functions }) {
     percent,
     decimal,
     calculatingButton,
-    numberButton,
+    showPrevNumberButton,
     showresult,
   } = functions;
 
   return (
     <>
-      {arrButton.map((button) => {
+      {arrButton.map((button, i) => {
         switch (button.typebutton) {
           case "resetResponse":
             return (
-              <Button
-                functionButton={resetResponse}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={resetResponse}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
           case "alterNegativeAndPositive":
             return (
-              <Button
-                functionButton={alterNegativeAndPositive}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={alterNegativeAndPositive}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
           case "percent":
             return (
-              <Button
-                functionButton={percent}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={percent}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
           case "decimal":
             return (
-              <Button
-                functionButton={decimal}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={decimal}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
           case "calculatingButton":
             return (
-              <Button
-                functionButton={calculatingButton}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={calculatingButton}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
           case "showresult":
             return (
-              <Button
-                functionButton={showresult}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={showresult}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
           default:
             return (
-              <Button
-                functionButton={numberButton}
-                valueButton={button.valueButton}
-              />
+              <div key={i}>
+                <Button
+                  functionButton={showPrevNumberButton}
+                  valueButton={button.valueButton}
+                />
+              </div>
             );
         }
       })}

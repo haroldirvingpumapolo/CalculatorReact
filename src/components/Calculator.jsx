@@ -81,10 +81,10 @@ function Calculator() {
 
   return (
     <div className="w-full max-h-screen text-2xl flex flex-col">
-      <div className=" h-32 max-w-3xl bg-gray-500 text-8xl flex  justify-end text-end items-end ">
+      <div className=" h-36 max-w-3xl bg-gray-500 text-8xl flex  justify-end text-end items-end ">
         {showNumbers}
       </div>
-      <div className="w-full max-w-3xl   flex flex-wrap">
+      <div className="w-full max-w-3xl max-h-96  flex flex-wrap">
         <CalculatorButtons
           functions={{
             resetResponse: resetResponse,

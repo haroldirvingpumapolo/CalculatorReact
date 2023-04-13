@@ -16,7 +16,7 @@ function Calculator() {
 
   function alterNegativeAndPositive() {
     (response || prevNumber) &&
-      (prevNumber && !response
+      (prevNumber
         ? (setPrevNumber((parseFloat(prevNumber) * -1).toString()),
           setShowNumbers((parseFloat(prevNumber) * -1).toString()))
         : (setResponse((parseFloat(response) * -1).toString()),
